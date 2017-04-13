@@ -235,7 +235,8 @@
 		params.CKEditorFuncNum = editor._.filebrowserFn;
 		if ( !params.langCode )
 			params.langCode = editor.langCode;
-
+			params.item_id = $('body').find('#blog-id').val();
+			
 		fileInput.action = addQueryString( filebrowser.url, params );
 		fileInput.filebrowser = filebrowser;
 	}

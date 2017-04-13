@@ -7,7 +7,6 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
-	// %REMOVE_START%
 	config.plugins =
 		'about,' +
 		'a11yhelp,' +
@@ -67,7 +66,16 @@ CKEDITOR.editorConfig = function( config ) {
 		'toolbar,' +
 		'undo,' +
 		'wysiwygarea';
-	// %REMOVE_END%
+
+		config.extraPlugins = 'autoembed,'+'embedsemantic,'+'image2,'+'uploadimage,'+'uploadfile,'+'widget';
+
+		config.removePlugins = 'image';
+
+		config.uploadUrl = '/alpha/ckeditor_GIT/manager/uploadBlogImage.php';
+		config.filebrowserUploadUrl = "/alpha/ckeditor_GIT/manager/uploadBlogImage.php";
+
+		config.removeButtons = 'Cut,Copy,Paste,PasteText,PasteFromWord,Redo,Undo,Source,Save,NewPage,Preview,Print,Templates,Find,Replace,SelectAll,Form,Checkbox,Radio,TextField,Textarea,Select,Button,HiddenField,ImageButton,CopyFormatting,Language,BidiRtl,BidiLtr,Flash,Smiley,PageBreak,Iframe,Font,TextColor,BGColor,About';
+		config.removeDialogTabs = 'image:Image Info';
 };
 
-// %LEAVE_UNMINIFIED% %REMOVE_LINE%
+
