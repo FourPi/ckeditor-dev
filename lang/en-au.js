@@ -32,7 +32,7 @@ CKEDITOR.lang[ 'en-au' ] = {
 		url: 'URL',
 		protocol: 'Protocol',
 		upload: 'Upload',
-		uploadSubmit: 'Send it to the Server',
+		uploadSubmit: 'Upload',
 		image: 'Image',
 		flash: 'Flash',
 		form: 'Form',

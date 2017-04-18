@@ -4,7 +4,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 CKEDITOR.plugins.setLang( 'image2', 'en', {
 	alt: 'Alternative Text',
-	btnUpload: 'Send it to the Server',
+	btnUpload: 'Upload',
 	captioned: 'Captioned image',
 	captionPlaceholder: 'Caption',
 	infoTab: 'Image Info',
