@@ -67,7 +67,7 @@ CKEDITOR.editorConfig = function( config ) {
 		'undo,' +
 		'wysiwygarea';
 
-		config.extraPlugins = 'autoembed,'+'embedsemantic,'+'image2,'+'uploadimage,'+'uploadfile,'+'widget';
+		config.extraPlugins = 'autoembed,'+'embedsemantic,'+'image2,'+'uploadimage,'+'uploadfile,'+'widget,'+'basewidget,'+'layoutmanager,'+'devtools';
 
 		config.removePlugins = 'image';
 
@@ -76,6 +76,29 @@ CKEDITOR.editorConfig = function( config ) {
 
 		config.removeButtons = 'Cut,Copy,Paste,PasteText,PasteFromWord,Redo,Undo,Source,Save,NewPage,Preview,Print,Templates,Find,Replace,SelectAll,Form,Checkbox,Radio,TextField,Textarea,Select,Button,HiddenField,ImageButton,CopyFormatting,Language,BidiRtl,BidiLtr,Flash,Smiley,PageBreak,Iframe,Font,TextColor,BGColor,About';
 		config.removeDialogTabs = 'image:Image Info';
+		config.layoutmanager_loadbootstrap = true/false //(false by default - embedded bootstrap.css is not loaded)
+		config.layoutmanager_allowedContent //(all tags are allowed by default)
+		config.layoutmanager_buttonboxWidth = 58 //(the width of each layout-preview button in the dialog).
+
+
+		CKEDITOR.on('dialogDefinition', function (ev) {
+				console.log(ev);
+              var dialogName = ev.data.name;
+              var dialog = ev.data.definition.dialog;
+
+              if (dialogName == 'image2') {
+                  dialog.on('show', function (ev,e) {
+					  console.log(ev);
+					  console.log(e);
+                      this.selectPage('Upload');
+                  });
+              }
+          });
+
+		  CKEDITOR.on( 'click', function( evt ) {
+				console.log(evt.data.getTarget()); // will return a target element (CKEDITOR.dom.element)
+				console.log(evt.data.$.target); // will contain a native element
+			} );
 };
 
 

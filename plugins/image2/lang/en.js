@@ -3,9 +3,9 @@ Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 CKEDITOR.plugins.setLang( 'image2', 'en', {
-	alt: 'Alternative Text',
+	alt: 'Alt text (Minor SEO keyword benifits)',
 	btnUpload: 'Upload',
-	captioned: 'Captioned image',
+	captioned: 'Show custom caption beneath image',
 	captionPlaceholder: 'Caption',
 	infoTab: 'Image Info',
 	lockRatio: 'Lock Ratio',

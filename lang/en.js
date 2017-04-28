@@ -29,7 +29,7 @@ CKEDITOR.lang[ 'en' ] = {
 		editorHelp: 'Press ALT 0 for help',
 
 		browseServer: 'Browse Server',
-		url: 'URL',
+		url: 'Direct link to image (advanced users)',
 		protocol: 'Protocol',
 		upload: 'Upload',
 		uploadSubmit: 'Upload',
