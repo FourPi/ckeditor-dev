@@ -23,7 +23,7 @@ CKEDITOR.dialog.add( 'image2', function( editor ) {
 		lockResetStyle = 'margin-top:18px;width:40px;height:20px;',
 		lockResetHtml = new CKEDITOR.template(
 			'<div>' +
-				'<a href="javascript:void(0)" tabindex="-1" title="' + lang.lockRatio + '" class="cke_btn_locked" id="{lockButtonId}" role="checkbox">' +
+				'<a href="javascript:void(0)" tabindex="-1" title="' + lang.lockRatio + '" class="cke_btn_locked hidden" id="{lockButtonId}" role="checkbox">' +
 					'<span class="cke_icon"></span>' +
 					'<span class="cke_label">' + lang.lockRatio + '</span>' +
 				'</a>' +
@@ -410,6 +410,7 @@ CKEDITOR.dialog.add( 'image2', function( editor ) {
 			{
 				id: 'info',
 				label: lang.infoTab,
+				hasSrc : srcChanged,
 				elements: [
 					{
 						type: 'vbox',

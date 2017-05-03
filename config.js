@@ -82,23 +82,27 @@ CKEDITOR.editorConfig = function( config ) {
 
 
 		CKEDITOR.on('dialogDefinition', function (ev) {
-				console.log(ev);
+				
               var dialogName = ev.data.name;
               var dialog = ev.data.definition.dialog;
-
+			 
               if (dialogName == 'image2') {
-                  dialog.on('show', function (ev,e) {
-					  console.log(ev);
-					  console.log(e);
-                      this.selectPage('Upload');
+                  dialog.on('show', function (ev) {
+					 
+					  var hasElement = this.getSelectedElement();
+					  if(hasElement == null)
+					  {
+						this.selectPage('Upload');
+					  }
+                      
                   });
               }
           });
-
-		  CKEDITOR.on( 'click', function( evt ) {
-				console.log(evt.data.getTarget()); // will return a target element (CKEDITOR.dom.element)
-				console.log(evt.data.$.target); // will contain a native element
-			} );
+			
 };
-
+/*
+var conf_4pi = {};
+conf_4pi.banner_width = 1200;
+conf_4pi.banner_height = 600;
+*/
 
