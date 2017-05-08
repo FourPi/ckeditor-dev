@@ -27,8 +27,6 @@ CKEDITOR.editorConfig = function( config ) {
 		'find,' +
 		'flash,' +
 		'floatingspace,' +
-		'font,' +
-		'format,' +
 		'forms,' +
 		'horizontalrule,' +
 		'htmlwriter,' +
@@ -67,7 +65,7 @@ CKEDITOR.editorConfig = function( config ) {
 		'undo,' +
 		'wysiwygarea';
 
-		config.extraPlugins = 'autoembed,'+'embedsemantic,'+'image2,'+'uploadimage,'+'uploadfile,'+'widget,'+'basewidget,'+'layoutmanager,'+'devtools';
+		config.extraPlugins = 'autoembed,'+'embedsemantic,'+'image2,'+'uploadimage,'+'uploadfile,'+'widget,'+'basewidget,'+'layoutmanager,'+'bt_table,'+'btquicktable,'+'devtools';
 
 		config.removePlugins = 'image';
 
@@ -79,7 +77,20 @@ CKEDITOR.editorConfig = function( config ) {
 		config.layoutmanager_loadbootstrap = true/false //(false by default - embedded bootstrap.css is not loaded)
 		config.layoutmanager_allowedContent //(all tags are allowed by default)
 		config.layoutmanager_buttonboxWidth = 58 //(the width of each layout-preview button in the dialog).
+		
 
+		/* stylesheet per site needs to be appended to content.css in ckeditor root 
+		!IMPORTANT do not override the existing styles above line 209 */
+		config.stylesSet = [
+			// Block-level styles.
+			{ name: 'Blue Title', element: 'h2', attributes: { 'class': 'colored-text' } },
+			{ name: 'CTA Large', element: 'h4', attributes: { 'class': 'cta-large' } },
+			{ name: 'Paragraph Text', element: 'p', attributes: { 'class': '' } },
+
+			// Inline styles.
+			{ name: 'CSS Style', element: 'span', attributes: { 'class': 'my_style' } },
+			{ name: 'Marker: Yellow', element: 'span', styles: { 'background-color': 'Yellow' } }
+		]
 
 		CKEDITOR.on('dialogDefinition', function (ev) {
 				
@@ -98,11 +109,13 @@ CKEDITOR.editorConfig = function( config ) {
                   });
               }
           });
+
+
+		  
 			
 };
-/*
-var conf_4pi = {};
-conf_4pi.banner_width = 1200;
-conf_4pi.banner_height = 600;
-*/
+
+
+
+
 
