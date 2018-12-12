@@ -65,12 +65,12 @@ CKEDITOR.editorConfig = function( config ) {
 		'undo,' +
 		'wysiwygarea';
 
-		config.extraPlugins = 'autoembed,'+'embedsemantic,'+'image2,'+'uploadimage,'+'uploadfile,'+'widget,'+'basewidget,'+'layoutmanager,'+'bt_table,'+'btquicktable,'+'devtools';
+		config.extraPlugins = 'autoembed,'+'embedsemantic,'+'image2,'+'uploadimage,'+'uploadfile,'+'widget,'+'basewidget,'+'layoutmanager,'+'bt_table,'+'btquicktable';
 
 		config.removePlugins = 'image';
 
-		config.uploadUrl = '/alpha/ckeditor_GIT/manager/uploadBlogImage.php';
-		config.filebrowserUploadUrl = "/alpha/ckeditor_GIT/manager/uploadBlogImage.php";
+		config.uploadUrl = '/manager/uploadBlogImage.php';
+		config.filebrowserUploadUrl = "/manager/uploadBlogImage.php";
 
 		config.removeButtons = 'Cut,Copy,Paste,PasteText,PasteFromWord,Redo,Undo,Source,Save,NewPage,Preview,Print,Templates,Find,Replace,SelectAll,Form,Checkbox,Radio,TextField,Textarea,Select,Button,HiddenField,ImageButton,CopyFormatting,Language,BidiRtl,BidiLtr,Flash,Smiley,PageBreak,Iframe,Font,TextColor,BGColor,About';
 		config.removeDialogTabs = 'image:Image Info';

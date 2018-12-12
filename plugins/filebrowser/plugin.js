@@ -236,6 +236,7 @@
 		if ( !params.langCode )
 			params.langCode = editor.langCode;
 			params.item_id = $('body').find('#blog-id').val();
+			params.type = $('body').find("#module-type").val();
 			
 		fileInput.action = addQueryString( filebrowser.url, params );
 		fileInput.filebrowser = filebrowser;
